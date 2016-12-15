@@ -1,0 +1,78 @@
+1. 数据库异步
+async_task.py
+
+class DBSearchHandler():
+	def post(self):
+	sql = "select ui_name,ui_mobile,hi_name,hi_address,hi_price from it_user_info inner join it_house_info on ui_user_id=hi_user_id where ui_user_id=%s"
+        try:
+            ret = self.application.db.query(sql, user_id)
+	self.write(ret)
+
+
+app = tornadow.web.Application(
+	[(r("/dbsearch"), DBSearchHandler)]
+)
+app.listen(9000)
+
+2. 提示插件
+Anaconda
+
+
+首选项-用户设置-
+{
+	"color_scheme": "Packages/Color Scheme - Default/LAZY.tmTheme",
+	"font_size": 15,
+	"ignored_packages":
+	[
+		"SublimeCodeIntel"
+	],
+	"indent_to_bracket": true,
+	"soda_classic_tabs": true,
+	"soda_folder_icons": true,
+	"tab_size": 4,
+	"theme": "Soda Dark 3.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"wide_caret": true,
+	"word_wrap": true
+}
+
+Anaconda 设置
+anaconda - settings user
+
+{
+    "extra_paths":
+    [
+        "~/.virtualenvs/tornado_py2/lib/python2.7/site-packages",
+    ],
+    "anaconda_linting": false
+}
+
+
+http://www.yuntongxun.com/
+
+
+airbnb
+
+小猪短租
+
+图片验证码
+g8mt  image   codeid 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
